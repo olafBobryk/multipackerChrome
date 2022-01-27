@@ -1,0 +1,127 @@
+html{
+  background-color: white;
+}
+
+body{
+  background-color: #0d1130;
+  width: 450px;
+  height : 560px;
+  margin: 0px;
+  
+}
+
+#sponsor{
+  position: absolute;
+  left: 86%;
+  font-size: 25px;
+  top: 2.25%;
+  z-index: 1;
+  background-color: #10185c;
+  color: white;
+  border-radius: 5px;
+  border-color: #1e2a82;
+}
+
+#sponsor:hover{
+  background-color: #1e2a82;
+}
+
+canvas{
+  position: absolute;
+  left: 25px;
+  background-color: #050A30;
+}
+
+.text{
+  color: white; 
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+}
+
+#lblHighscore{
+  font-size: 15px;
+  text-align: center;
+}
+
+.btns{
+  display: block;
+  margin-bottom:5px;
+  position: relative;
+  left: 35%;
+  top: 35%;
+  width: 150px;
+  font-size: 30px;
+  z-index: 1;
+  background-color: #10185c;
+  color: white;
+  border-radius: 5px;
+  border-color: #1e2a82;
+  visibility: hidden;
+}
+
+.btns:hover{
+  background-color: #1e2a82;
+}
+
+.switch{
+  
+  position: relative;
+  display: inline-block;
+  top: 33.75%;
+  left: 35%;
+  width: 148px;
+  height: 37.5px;
+  z-index: 1;
+  border-width: 5px;
+  /* visibility: hidden; */
+  
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #10185c;
+  border-radius: 5px;
+  -webkit-transition: .4s;
+  transition: var(--trans);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 29px;
+  width: 29px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  color:#050A30;
+  font-size: 18px;
+  text-align: center;
+  content: '1x';
+  border-radius: 5px;
+  /* -webkit-transition: .4s; */
+  transition: var(--trans);
+}
+
+input:checked + .slider {
+  background-color: #1e2a82;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(112px);
+  -ms-transform: translateX(112px);
+  transform: translateX(112px);
+  content: '2x';
+}
